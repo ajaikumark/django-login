@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+{% if msg %}
+<h1>{{msg}}</h1>
+{% else %}
+<form method='post' action='/register_action/'>
+	{% csrf_token %}
+	Username
+	<input type='text' name='username'/><br/>
+	Password
+	<input type='password' name='password'/><br/>
+	<input type='submit' value='register' name='register'/>
+</form>
+{% endif %}
+</body>
+</html>
