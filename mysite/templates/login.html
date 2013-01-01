@@ -2,6 +2,9 @@
 <head>
 </head>
 <body>
+{% if msg %}
+<h1>{{msg}}</h1>
+{% else %}
 <form method='post' action='/login_action/'>
 	{% csrf_token %}
 Username:
@@ -10,5 +13,6 @@ Password:
 <input type='password' name='password'/><br/>
 <input type='submit' name='login' value='login'/>
 </form>
+{% endif %}
 </body>
 </html>
